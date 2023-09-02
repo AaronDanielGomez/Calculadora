@@ -5,7 +5,7 @@
 
 This is a project of a **calculator** that I made to practice my knowledge.
 
-The languages ​​I used were:
+The technologies used to carry out the project were:
 
 * **HTML**
 
