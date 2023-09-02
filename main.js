@@ -1,13 +1,15 @@
 const input = document.querySelector(".input__result")
+
 const buttons = document.querySelectorAll(".button")
 
-const btnResultado = document.querySelector(".button__result")
+const buttonsSpecials = document.querySelectorAll(".button__special")
 
-const btnDelete = document.querySelector(".button__ac")
+
+const btnResult = document.querySelector(".button__result")
+
+const btnAC = document.querySelector(".button__ac")
 
 const btnDel = document.querySelector(".button__del")
-
-
 
 
 //Function Sumar 
@@ -42,6 +44,31 @@ const dividir = (num1,num2) =>{
     input.value = result
 }
 
+// Function sqrt
+
+
+const sqrt = (num) =>{
+    let result = Math.sqrt(parseInt(num))
+
+    if(isNaN(result)){
+        input.value = "Error"
+    
+    }else{
+        input.value = result
+    }
+
+}
+
+
+// Function pow
+
+
+const pow = (num1,num2) =>{
+    let result = Math.pow(parseInt(num1),parseInt(num2))
+
+    input.value = result
+}
+
 
 // function that takes all button values and writes them to input
 
@@ -51,17 +78,22 @@ buttons.forEach((btn)=>{
     })
 })
 
+buttonsSpecials.forEach((btnSpecial)=>{
+    btnSpecial.addEventListener("click",()=>{
+        input.value += btnSpecial.value
+    })
+})
 
 // function of the AC button that deletes everything that is written in the input
 
-btnDelete.addEventListener("click",()=>{
+btnAC.addEventListener("click",()=>{
     input.value = null
 })
 
 
 // button function =, which when click resolves what is written in the input
 
-btnResultado.addEventListener("click",()=>{
+btnResult.addEventListener("click",()=>{
 
     if(input.value.includes("+")){
         
@@ -86,7 +118,20 @@ btnResultado.addEventListener("click",()=>{
         let operation = input.value.split("/")
 
         dividir(operation[0],operation[1])
+    
+    }else if(input.value.includes("√")){
+
+        let operation = input.value.split("√")
+
+        sqrt(operation[1])
+    
+    }else if(input.value.includes("^")){
+
+        let operation = input.value.split("^")
+
+        pow(operation[0],operation[1])
     }
+
 })
 
 
