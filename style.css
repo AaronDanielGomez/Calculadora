@@ -1,8 +1,6 @@
-
 *{
     box-sizing: border-box;
 }
-
 
 body{
     height: 100vh;
@@ -12,12 +10,30 @@ body{
     background-color: #8ec0f3;
 }
 
+/* Content Container Styles */
 
 .conteiner__content{
     padding: 1rem;
-    background-color: #61616A;
+    background-color: #524F63;
     border-radius: 5px;
     box-shadow: 1px 1px 10px black;
+}
+
+/* Logo Styles */
+
+.conteiner__logo{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    color: #ffffff;
+}
+
+.title__logo{
+    margin: 0;
+}
+
+.text__logo{
+    margin: 0;
 }
 
 /* Input Styles */
@@ -31,9 +47,39 @@ body{
 .input__result{
     border: none;
     outline: none;
-    padding: .5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 20px;
     background-color: #9BAEA2;
     width: 250px;
+}
+
+
+/* Special Button Styles */
+
+.conteiner__buttons-specials{
+    display: grid;
+    grid-template-columns: repeat(6,40px);
+    gap: .5rem;
+    justify-content: center;
+
+    align-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.conteiner__button-special:active{
+    transform: scale(0.9);
+}
+
+.button__special{
+    border: none;
+    padding: .5rem;
+    background-color: #353F49;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* Button Styles */
@@ -48,60 +94,27 @@ body{
     justify-items: center;
 }
 
-
-.conteiner__button{
-    position: relative;
-}
-
-
-.button{
-    cursor: pointer;
-    border: none;
-    background-color: #c5c5c7;
-    padding: 1rem;
-    transform: scale(0.95);
-    position: relative;
-}
-
-
-.conteiner__button::before{
-    content: '';
-    background-color: #3f3f3f;
-    width: 40px;
-    height: 50px;
-    position: absolute;
-}
-
-
 .conteiner__button:active{
     transform: scale(0.9);
 }
 
+.button{
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #9390A1;
+    color: #ffffff;
+    padding: .5rem 1rem;
+}
 
 /*AC button styles*/
 
-
-.conteiner__button-ac{
-    position: relative;
-}
-
 .button__ac{
     padding: .5rem;
-    position: relative;
     background-color: #981D3E;
     color: #ffffff;
     border: none;
-    transform: scale(.9);
     cursor: pointer;
-}
-
-.conteiner__button-ac::before{
-    content: '';
-    background-color: #75142e;
-    position: absolute;
-    left: -3px;
-    width: 40px;
-    height: 35px;
 }
 
 .conteiner__button-delete:active{
@@ -117,24 +130,22 @@ body{
     background-color: #981D3E;
     color: #ffffff;
     border: none;
-    transform: scale(.9);
     cursor: pointer;
 }
 
-
-.conteiner__button-del{
-    position: relative;
-}
-
-.conteiner__button-del::before{
-    content: '';
-    background-color: #75142e;
-    position: absolute;
-    width: 40px;
-    height: 35px;
-}
 
 .conteiner__button-del:active{
     transform: scale(.9);
 }
 
+/* EXP button style */
+
+.button__exp{
+    padding: .5rem;
+}
+
+/* AC button  style */
+
+.button__ans{
+    padding: .5rem;
+}
